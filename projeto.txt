@@ -1,0 +1,15 @@
+Crie um projeto 'projetoMercado' que deve ter: - página de login com SESSION.
+
+- página de cadastro e listagem de: - categoria de produto (Exemplo: bebida, limpeza, pessoal, alimentação).
+
+- produtos.
+
+- deve oferecer a possibilidade de deletar:
+
+- produtos cadastrados.
+
+- categoria
+
+_______________________________________________________________________________
+
+Implementar edição para todos os cadastros. consulta de produtos e categorias.

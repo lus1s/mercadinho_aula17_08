@@ -1,0 +1,25 @@
+version: "3"
+services:
+  php:
+    build: .
+    container_name: "projeto-2a"
+    image: php:8.1.16-apache
+    volumes:
+      - ./arquivos/:/var/www/html/
+    ports:
+      - 8080:80
+  db:
+    image: mariadb:10.5
+    container_name: "mariadb_projeto-2a"
+    restart: always
+    environment:
+      - MARIADB_USER=root
+      - MARIADB_ROOT_PASSWORD=123
+    ports:
+      - 3307:3306
+  adminer:
+    image: adminer:4.8.1
+    container_name: "adminer_projeto-2a"
+    restart: always
+    ports:
+      - 81:8080
