@@ -16,7 +16,7 @@ services:
     - MARIADB_ROOT_PASSWORD=123
   adminer:
     image: adminer:4.8.1
-    container_name: "adm_cea"
+    container_name: "adm_mercadinho"
     restart: always
     ports:
       - 81:8080
