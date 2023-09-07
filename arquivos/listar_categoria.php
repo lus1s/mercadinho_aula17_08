@@ -15,7 +15,7 @@
             <tr>
                 <td>Id</td>
                 <td>Categoria</td>
-                <td>Alterações</td>
+                <td colspan="2">Alterações</td>
             </tr>
         <?php
             $sql = "SELECT * FROM tb_categoria";
@@ -24,14 +24,18 @@
 
             if (mysqli_num_rows($resultados) > 0) {
                 while ($linha = mysqli_fetch_array($resultados)) {
+                    $id = $linha['id_categoria'];
+                    $nome = $linha['nome_categ'];
+                    echo "<form action='deletar_dados.php'>";
                     echo "<tr>";
-                        echo "<td>" . $linha['id_categoria'] . "</td>"; 
-                        echo "<td>" . $linha['nome_categ'] . "</td>"; 
+                        echo "<td>" . $id . "</td>"; 
+                        echo "<td>" . $nome . "</td>"; 
+                        echo "<td rowspan='1'> <a href='index.php'><img src='imagens/alterar.jpeg' width='25px'> </a>";
+                        echo "<td> <a href='deletar_dados.php?id_categoria=$id'><img src='imagens/shutterstock-delete.jpg' width='25px'> </a>";
                     echo "</tr>";
                 }
             }
         ?>
-        <tr></tr>
         </table>
         <br><br>
         <button><a href="index.php">Tela Inicial</a></button>
