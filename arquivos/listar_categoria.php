@@ -13,7 +13,6 @@
     <body>
         <table border="1">
             <tr>
-                <td>Id</td>
                 <td>Categoria</td>
                 <td colspan="2">Alterações</td>
             </tr>
@@ -28,7 +27,6 @@
                     $nome = $linha['nome_categ'];
                     echo "<form action='deletar_dados.php'>";
                     echo "<tr>";
-                        echo "<td>" . $id . "</td>"; 
                         echo "<td>" . $nome . "</td>"; 
                         echo "<td rowspan='1'> <a href='index.php'><img src='imagens/alterar.jpeg' width='25px'> </a>";
                         echo "<td> <a href='deletar_dados.php?id_categoria=$id'><img src='imagens/shutterstock-delete.jpg' width='25px'> </a>";
